@@ -359,51 +359,6 @@ def seo_get_seo_checklist(url: str = "") -> dict:
 
 
 # ============================================================
-# DataForSEO API (4 tools) — optional
-# ============================================================
-
-
-@mcp.tool()
-def seo_research_keywords(
-    keywords: list[str], location: str = "Poland", language: str = "pl"
-) -> dict:
-    """Keyword research via DataForSEO API: search volume, CPC, competition,
-    trends, keyword difficulty. Requires DATAFORSEO_LOGIN and
-    DATAFORSEO_PASSWORD environment variables."""
-    from seoleo.api.dataforseo import research_keywords
-    return research_keywords(keywords, location, language)
-
-
-@mcp.tool()
-def seo_analyze_serp(
-    keyword: str, location: str = "Poland", language: str = "pl"
-) -> dict:
-    """SERP analysis for a keyword: top 20 results, SERP features
-    (featured snippets, PAA, knowledge panel), domain authority signals.
-    Requires DataForSEO API credentials."""
-    from seoleo.api.dataforseo import analyze_serp
-    return analyze_serp(keyword, location, language)
-
-
-@mcp.tool()
-def seo_check_backlinks(domain: str, limit: int = 100) -> dict:
-    """Backlink profile analysis: referring domains, anchor text distribution,
-    dofollow/nofollow ratio, top referring pages.
-    Requires DataForSEO API credentials."""
-    from seoleo.api.dataforseo import check_backlinks
-    return check_backlinks(domain, limit)
-
-
-@mcp.tool()
-def seo_analyze_domain(domain: str) -> dict:
-    """Domain overview: authority metrics, estimated traffic, top ranked keywords,
-    top pages, technology stack detection.
-    Requires DataForSEO API credentials."""
-    from seoleo.api.dataforseo import analyze_domain
-    return analyze_domain(domain)
-
-
-# ============================================================
 # Reporting (1 tool)
 # ============================================================
 
@@ -442,5 +397,5 @@ def seo_get_config() -> dict:
         "version": __version__,
         "python": sys.version,
         "features": config.status(),
-        "tools_count": 37,
+        "tools_count": 33,
     }

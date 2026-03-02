@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "seoleo-mcp"
 version = "0.2.0"
-description = "The most comprehensive SEO/UX/GEO MCP server — 37 tools for technical SEO, content analysis, accessibility, AI search optimization, and more."
+description = "The most comprehensive SEO/UX/GEO MCP server — 33 tools for technical SEO, content analysis, accessibility, AI search optimization, and more."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
@@ -29,8 +29,6 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dataforseo = ["httpx>=0.25"]
-email = ["python-dotenv>=1.0"]
 dev = [
     "pytest>=7.0",
     "pytest-asyncio>=0.21",

@@ -2,7 +2,7 @@
 
 The most comprehensive SEO/UX/GEO MCP server.
 
-**37 tools** covering technical SEO, content analysis, accessibility, security, and AI search optimization (GEO).
+**33 tools** covering technical SEO, content analysis, accessibility, security, and AI search optimization (GEO).
 
 ```
    _____ ______ ____  _      ______ ____
@@ -15,7 +15,7 @@ The most comprehensive SEO/UX/GEO MCP server.
 
 ## Status
 
-> **Alpha** — 33 tools fully implemented, 4 optional (DataForSEO API — requires key).
+> **Alpha** — 33 tools fully implemented.
 > Contributions welcome!
 
 ## Features
@@ -94,7 +94,9 @@ echo '...' | docker run -i seoleo-mcp
 | `seo_check_headers` | HTTP security headers check |
 | `seo_check_performance` | Lighthouse CWV (mobile+desktop) |
 
-### GEO — AI Search Optimization (7)| Tool | Description |
+### GEO — AI Search Optimization (7)
+
+| Tool | Description |
 |------|-------------|
 | `seo_audit_geo` | Princeton 9 methods GEO audit |
 | `seo_optimize_geo` | GEO optimization suggestions |
@@ -104,58 +106,66 @@ echo '...' | docker run -i seoleo-mcp
 | `seo_get_geo_checklist` | GEO optimization checklist (P0/P1/P2) |
 | `seo_get_seo_checklist` | Traditional SEO checklist (P0/P1/P2) |
 
-### Reporting (1)| Tool | Description |
+### Reporting (1)
+
+| Tool | Description |
 |------|-------------|
 | `seo_generate_report` | JSON report + branded PDF generation (EN/PL) |
 
-### Utility (1)| Tool | Description |
+### Utility (1)
+
+| Tool | Description |
 |------|-------------|
 | `seo_get_config` | Server status and feature availability |
 
-### Content Analysis (3)| Tool | Description |
-|------|-------------|
-| `seo_analyze_content` | *Readability (FK, Fog, FRE) + keyword density* |
-| `seo_check_eeat` | *E-E-A-T signal detection* |
-| `seo_audit_topic_clusters` | *Topic cluster structure analysis* |
+### Content Analysis (3)
 
-### Schema / Structured Data (3)| Tool | Description |
-|------|-------------|
-| `seo_validate_schema` | *JSON-LD validation vs Google requirements* |
-| `seo_generate_schema` | *Generate JSON-LD from 10 templates* |
-| `seo_check_rich_results` | *Rich Result eligibility check* |
-
-### Security (2)| Tool | Description |
-|------|-------------|
-| `seo_audit_ssl` | *Full SSL/TLS audit* |
-| `seo_check_security_headers` | *Security headers analysis* |
-
-### Links (2)| Tool | Description |
-|------|-------------|
-| `seo_audit_links` | *BFS crawl + link graph analysis* |
-| `seo_check_broken_links` | *Quick broken link scan* |
-
-### Other (5)| Tool | Description |
-|------|-------------|
-| `seo_audit_accessibility` | *WCAG 2.2 Level AA audit* |
-| `seo_check_hreflang` | *International SEO validation* |
-| `seo_audit_local` | *Local SEO + NAP extraction* |
-| `seo_audit_media` | *Image/video SEO audit* |
-| `seo_compare_competitors` | *Side-by-side comparison (up to 3)* |
-
-### Advanced (4)| Tool | Description |
-|------|-------------|
-| `seo_check_js_rendering` | *SPA/JS rendering detection* |
-| `seo_analyze_logs` | *Server log analysis* |
-| `seo_analyze_gsc` | *Google Search Console data analysis* |
-| `seo_compare_audits` | *Audit diff and trends* |
-
-### DataForSEO (4, optional) (requires API key)
 | Tool | Description |
 |------|-------------|
-| `seo_research_keywords` | *Keyword volume, CPC, competition* |
-| `seo_analyze_serp` | *SERP analysis + features* |
-| `seo_check_backlinks` | *Backlink profile* |
-| `seo_analyze_domain` | *Domain overview* |
+| `seo_analyze_content` | Readability (FK, Fog, FRE) + keyword density |
+| `seo_check_eeat` | E-E-A-T signal detection |
+| `seo_audit_topic_clusters` | Topic cluster structure analysis |
+
+### Schema / Structured Data (3)
+
+| Tool | Description |
+|------|-------------|
+| `seo_validate_schema` | JSON-LD validation vs Google requirements |
+| `seo_generate_schema` | Generate JSON-LD from 10 templates |
+| `seo_check_rich_results` | Rich Result eligibility check |
+
+### Security (2)
+
+| Tool | Description |
+|------|-------------|
+| `seo_audit_ssl` | Full SSL/TLS audit |
+| `seo_check_security_headers` | Security headers analysis |
+
+### Links (2)
+
+| Tool | Description |
+|------|-------------|
+| `seo_audit_links` | BFS crawl + link graph analysis |
+| `seo_check_broken_links` | Quick broken link scan |
+
+### Other (5)
+
+| Tool | Description |
+|------|-------------|
+| `seo_audit_accessibility` | WCAG 2.2 Level AA audit |
+| `seo_check_hreflang` | International SEO validation |
+| `seo_audit_local` | Local SEO + NAP extraction |
+| `seo_audit_media` | Image/video SEO audit |
+| `seo_compare_competitors` | Side-by-side comparison (up to 3) |
+
+### Advanced (4)
+
+| Tool | Description |
+|------|-------------|
+| `seo_check_js_rendering` | SPA/JS rendering detection |
+| `seo_analyze_logs` | Server log analysis |
+| `seo_analyze_gsc` | Google Search Console data analysis |
+| `seo_compare_audits` | Audit diff and trends |
 
 ## GEO: AI Search Optimization
 
@@ -178,10 +188,6 @@ Based on Princeton research (arXiv:2311.09735, KDD 2024), these methods increase
 ## Configuration
 
 ```bash
-# Optional: DataForSEO API
-export DATAFORSEO_LOGIN=your_login
-export DATAFORSEO_PASSWORD=your_password
-
 # Optional: Lighthouse timeout
 export SEOLEO_LIGHTHOUSE_TIMEOUT=120
 ```

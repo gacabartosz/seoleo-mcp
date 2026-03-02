@@ -5,7 +5,6 @@
 - `core/` — shared infrastructure (collectors, parsers, analyzers, lighthouse, config)
 - `tools/` — 1 module per SEO domain (technical, content, schema, security, links, etc.)
 - `geo/` — GEO (Generative Engine Optimization) — AI search citation optimization
-- `api/` — optional external API clients (DataForSEO)
 - `data/` — bundled reference data (JSON/TXT)
 
 ## Key Patterns
@@ -25,29 +24,10 @@ printf '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion
 ```
 
 ## Current State (v0.2.0)
-- server.py: 37 tools registered
-- core/: fully implemented (collectors, parsers, analyzers, lighthouse, config)
-- tools/technical.py: fully implemented (13-step audit pipeline)
-- tools/reporting.py: implemented (JSON report + PDF via pdf-generator)
-- geo/: analyzer, optimizer, platforms, robots_ai, checklist — all implemented
-- tools/*.py (14 remaining): stub implementations — see Priority below
-- api/dataforseo.py: stub with graceful degradation
-
-## Priority for Implementation
-1. tools/content.py — readability scores (FK, Fog, FRE) + keyword density
-2. tools/schema.py — JSON-LD validation against Google requirements
-3. tools/security.py — SSL/TLS audit (cert chain, protocols, ciphers)
-4. tools/links.py — BFS internal link crawler + broken link scan
-5. tools/accessibility.py — WCAG 2.2 Level AA checks
-6. tools/international.py — hreflang validation (HTML, HTTP, sitemap)
-7. tools/local_seo.py — NAP extraction, LocalBusiness schema
-8. tools/media.py — image/video SEO (formats, sizes, alt, srcset)
-9. tools/competitor.py — side-by-side multi-site comparison
-10. tools/topic_clusters.py — pillar/cluster detection from sitemap
-11. tools/js_rendering.py — SPA detection, framework fingerprints
-12. tools/logs.py — server log analysis, bot identification
-13. tools/gsc.py — GSC CSV import, keyword cannibalization
-14. tools/dashboard.py — audit diff and trend tracking
+- 33 tools registered and fully implemented
+- core/: collectors, parsers, analyzers, lighthouse, config
+- tools/: technical, content, schema, security, links, accessibility, international, local_seo, media, competitor, topic_clusters, js_rendering, logs, gsc, dashboard, reporting
+- geo/: analyzer, optimizer, platforms, robots_ai, checklist
 
 ## Implementation Pattern
 Each tool follows:
