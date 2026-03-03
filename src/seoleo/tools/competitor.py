@@ -356,13 +356,13 @@ def compare_competitors(
     lighthouse_data: dict | None = None
     if include_lighthouse and config.has_lighthouse:
         try:
-            from seoleo.core.lighthouse import run_lighthouse
+            from seoleo.core.lighthouse import run_full_lighthouse
 
             all_urls = [client_url] + [c["url"] for c in competitor_results]
             lighthouse_data = {}
             for lh_url in all_urls:
                 try:
-                    lh_result = run_lighthouse(lh_url)
+                    lh_result = run_full_lighthouse(lh_url, "mobile")
                     lighthouse_data[lh_url] = lh_result
                 except Exception as e:
                     logger.warning("Lighthouse failed for %s: %s", lh_url, e)
